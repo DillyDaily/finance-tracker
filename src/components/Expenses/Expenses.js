@@ -1,5 +1,5 @@
 // import {OneExpenseItem} from './OneExpenseItem';
-// import './Expenses.css';
+// import '../UI/Expenses.css';
 
 // export const Expenses = ({item})=>{
 //     return(
