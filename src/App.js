@@ -1,4 +1,5 @@
 import OneExpenseItem from "./components/Expenses/OneExpenseItem";
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   
@@ -31,8 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <p>this is also visible</p>
+      <NewExpense />
       <OneExpenseItem expenseItems={expenses}/>
     </div>
   );
