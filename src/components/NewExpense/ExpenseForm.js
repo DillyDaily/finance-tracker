@@ -4,40 +4,44 @@ import './ExpenseForm.css';
 
 const ExpenseForm = () => {
   //multiple states in component
-  // const [enteredTitle, setEnteredTitle] = useState(''); 
-  // const [enteredAmount, setEnteredAmount] = useState(''); 
-  // const [enteredDate, setEnteredDate] = useState('');
+  const [enteredTitle, setEnteredTitle] = useState(''); 
+  const [enteredAmount, setEnteredAmount] = useState(''); 
+  const [enteredDate, setEnteredDate] = useState('');
 
   //1 state: 
-  const [userInput, setUserInput] = useState({
-    enteredTitle: '',
-    enteredAmount: '',
-    enteredDate: ''
-  });
+  // const [userInput, setUserInput] = useState({
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   enteredDate: ''
+  // });
 
   const titleChangeHandler = (event) => {
-    // setEnteredTitle(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
-    });
+    setEnteredTitle(event.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredTitle: event.target.value,
+    // });
+    // BETTER Alternative: 
+    // setUserInput((prevState) => {
+        // return{...prevState, enteredTitle: event.target.value}; <- this is overriding enteredTitle
+      // };
   };
 
   const amountChangeHandler = (event) => {
-    // setEnteredAmount(event.target.event);
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value,
-    });
+    setEnteredAmount(event.target.event);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredAmount: event.target.value,
+    // });
 
   };
 
   const DateChangeHandler = (event) => {
-    // setEnteredDate(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredDate: event.target.value,
-    });
+    setEnteredDate(event.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredDate: event.target.value,
+    // });
   };
 
   const submitButtonHandler = (event) => {
