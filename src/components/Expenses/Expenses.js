@@ -1,13 +1,11 @@
-// import '../UI/Expenses.css';
-import React, { useState } from 'react';
+import React from 'react';
 import ExpenseCard from "./ExpenseCard";
-import ExpenseDate from './ExpenseDate';
 
 function Expenses(props) {
     const expenses = props.expenses;
 
     return (
-        <div className='expenses'> 
+        <div> 
         { expenses.map(i => <ExpenseCard key={i.id} title={i.title} price={i.amount} date={i.date}/>)
         }
       </div>

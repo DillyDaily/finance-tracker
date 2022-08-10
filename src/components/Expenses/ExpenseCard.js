@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ExpenseCard.css';
 import './Expenses.css';
-import ExpenseDate from './ExpenseDate';
+import './ExpenseDate.css';
 import Card from '../UI/Card';
 
 const ExpenseCard = (props) => {
@@ -13,10 +13,7 @@ const ExpenseCard = (props) => {
 
     const clickHandeler = () => {
         setTitle('Updated!');
-        // console.log('title ',title );
     }
-
-    // console.log('UNO props' , props);     
 
     return (
         

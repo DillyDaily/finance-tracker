@@ -43,11 +43,18 @@ const ExpenseForm = () => {
     // });
   };
 
-  const submitButtonHandler = (event) => {
-    console.log('I clicked a thing')
+  const submitFormHandler = (event) => {
+    event.preventDefault();
+    
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+    };
+    console.log(expenseData);
   };
-
-  return <form>
+  
+  return <form onSubmit={submitFormHandler}>
     <div className='new-expense__controls'>
         <div className='new-expense__control'>
             <label>Title</label>
@@ -55,7 +62,7 @@ const ExpenseForm = () => {
         </div>
         <div className='new-expense__control'>
             <label>Amount</label>
-            <input type ='number' min='0.01' step='0.1' onChange={amountChangeHandler} />
+            <input type ='number' min='0.01' step='0.01' onChange={amountChangeHandler} />
         </div>
         <div className='new-expense__control'>
             <label>Date</label>
@@ -63,7 +70,7 @@ const ExpenseForm = () => {
         </div>
     </div>
     <div className='new-expense__actions'>
-      <button type='submit' onClick={submitButtonHandler}>Add Expense</button>
+      <button type='submit'>Add Expense</button>
     </div>
   </form>  
 };
