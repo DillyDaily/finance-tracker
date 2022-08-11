@@ -27,12 +27,17 @@ const App = () => {
       title: 'Cars are expensive',
       amount: 333.63,
       date: new Date(2009, 5, 26)
-    }
-  ]
+    },
+  ];
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js file ');
+    console.log(expense);
+  };
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses}/>
     </div>
   );
