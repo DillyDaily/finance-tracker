@@ -16,11 +16,11 @@ function Expenses(props) {
     })
 
     return (
-        <div>
+        <div className = "expenses">
             <ExpensesFilter filtered={filteredYear} onSelectYear={displaySelectedDateHandler}/>
             <ExpensesList filteredExpenses={filteredExpenses} />
         </div>
     );
-  }
+  };
 
   export default Expenses;

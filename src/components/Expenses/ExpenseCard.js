@@ -11,26 +11,22 @@ const ExpenseCard = (props) => {
     let day = date.toLocaleString('en-US', {day: '2-digit'},);
     let year = date.getFullYear();
 
-    const clickHandeler = () => {
-        setTitle('Updated!');
-    }
-
     return (
-        
-        <Card className = 'expenses'>
-            <Card className='expense-item'>
-                <Card className='expense-date'>
-                    <div className='expense-date__month'>{month}</div>
-                    <div className='expense-date__year'>{year}</div>
-                    <div className='expense-date__day'>{day}</div>
-                </Card>
-                <div className='expense-item__description'>     
-                    <h2>{title}</h2>
-                    <div className="expense-item__price">${price}</div>
-                </div>
-                <button onClick={clickHandeler}>Change title</button>
-            </Card>    
-        </Card>
+        <li>
+            <Card className = 'expenses'>
+                <Card className='expense-item'>
+                    <Card className='expense-date'>
+                        <div className='expense-date__month'>{month}</div>
+                        <div className='expense-date__year'>{year}</div>
+                        <div className='expense-date__day'>{day}</div>
+                    </Card>
+                    <div className='expense-item__description'>     
+                        <h2>{title}</h2>
+                        <div className="expense-item__price">${price}</div>
+                    </div>
+                </Card>    
+            </Card>
+        </li>
     );
 }
 
