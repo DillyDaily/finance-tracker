@@ -9,8 +9,6 @@ function Expenses(props) {
 
     const displaySelectedDateHandler = (selectedYear) => {
        setSelectedYear(selectedYear);
-       console.log('EXPS ', selectedYear);
-       console.log('FILTERED ', filteredYear)
     }
 
     return (
